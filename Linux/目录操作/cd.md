@@ -1,8 +1,12 @@
-### cd
+## cd
 
 ```shell
 cd <dir>	# 切换到<dir>目录
 ```
+
+
+
+#### Examples
 
 -   ```shell
     cd ~	# 切换到/home目录
