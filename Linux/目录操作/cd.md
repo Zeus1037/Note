@@ -1,4 +1,4 @@
-## cd
+## cd	<!--change directory-->
 
 ```shell
 cd <dir>	# 切换到<dir>目录
@@ -9,7 +9,7 @@ cd <dir>	# 切换到<dir>目录
 #### Examples
 
 -   ```shell
-    cd ~	# 切换到/home目录
+    cd ~	# 切换到用户目录
     ```
 
 -   ```shell

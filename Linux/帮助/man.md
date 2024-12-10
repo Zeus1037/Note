@@ -1,4 +1,4 @@
-## man
+## man	<!--manual-->
 
 ```shell
 man [options] <command>		# 查看<command>命令的帮助手册
