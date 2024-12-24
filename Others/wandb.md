@@ -67,10 +67,18 @@ wandb.finish()
 
 **原因**：网络不稳定，导致服务器wandb挂起
 
-**==解决方案==**：在服务器进程结束后，在进程工作目录下wandb文件夹，以及存储在本地对应该次进程的wandb文件（假设本地的wandb文件名为 run-20230105_104214-3fjeioj8），在终端运行以下命令即可同步到线上的wandb：
+**==解决方案==**：服务器进程结束后，在当前目录下找到wandb文件夹，以及存储在本地对应该次进程的wandb文件（假设本地的wandb文件名为 run-20230105_104214-3fjeioj8），在终端运行以下命令即可同步到线上的wandb：
 
 ```bash
 cd wandb
 wandb sync run-20230105_104214-3fjeioj8
+```
+
+#### 2. 在程序中关闭wandb上传（常用在程序调试过程中）
+
+在代码中添加这一行
+
+```python
+os.environ['WANDB_DISABLED'] = 'true'
 ```
 
