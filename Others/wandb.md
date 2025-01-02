@@ -74,11 +74,23 @@ cd wandb
 wandb sync run-20230105_104214-3fjeioj8
 ```
 
+
+
 #### 2. 在程序中关闭wandb上传（常用在程序调试过程中）
 
-在代码中添加这一行
+==**解决方案**==：在代码中添加这一行
 
 ```python
 os.environ['WANDB_DISABLED'] = 'true'
+```
+
+
+
+#### 3. `ctrl+c`结束程序时偶尔会一直输出`wandb-servicef 0.006 MB uploaded (0.000 MB deduped)`
+
+==**解决方案**==：在命令行运行以下命令
+
+```bash
+pkill wandb-service
 ```
 
